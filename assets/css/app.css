@@ -1,8 +1,10 @@
 :root {
-	--site-background-color: #fff;
+	--site-max-width: 60%; /* 1024px */
+	--site-background-color: #007faf;
+	--site-main-background-color: #fff;
 	--site-primary-color: #654ea3;
 	--site-secondary-color: #2d2c4d;
-	--site-tertiary-color: #007faf;
+	--site-tertiary-color: var(--site-background-color);
 	--site-highlight-color: #d7de21;
 	--site-primary-font: 'D Diam';
 }
@@ -27,7 +29,7 @@ body {
 
 .content {
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: var(--site-max-width);
 }
 
 
@@ -37,10 +39,24 @@ header {
 	padding: 40px 0;
 }
 
+header .flag {
+	background-color: var(--site-highlight-color);
+	color: var(--site-primary-color);
+	display: inline-block;
+	font-family: var(--site-primary-font);
+	font-size: 24px;
+	line-height: 1;
+	margin: 0 0 8px 8px;
+	padding: 6px 12px 2px;
+	text-transform: uppercase;
+	transform: skew(-20deg);
+}
+
 header h1 {
 	font-family: var(--site-primary-font);
-	font-size: 64px;
+	font-size: 80px;
 	color: #fff;
+	line-height: 1;
 	margin: 0;
 	text-shadow: -3px 3px 0 var(--site-tertiary-color);
 	text-transform: uppercase;
@@ -54,46 +70,9 @@ header h2 {
 	margin: -4px 0 0;
 }
 
-header h2 .date {
-	color: var(--site-highlight-color);
+header h2 .flag {
+	font-weight: 200;
 }
-
-header .flag {
-	background-color: var(--site-highlight-color);
-	color: var(--site-primary-color);
-	display: inline-block;
-	font-family: var(--site-primary-font);
-	font-size: 24px;
-	line-height: 1;
-	margin: 0 0 6px 8px;
-	padding: 6px 12px 2px;
-	text-transform: uppercase;
-	transform: skew(-20deg);
-}
-
-
-/* BANNER 
-.banner {
-	background-color: var(--site-tertiary-color);
-	padding: 16px 0;
-}
-
-.banner p {
-	color: #fff;
-	font-size: 24px;
-	margin: 0;
-	text-align: center;
-	font-style: italic;
-}
-
-.banner .date {
-	background-color: var(--site-highlight-color);
-	color: var(--site-primary-color);
-	display: inline-block;
-	padding: 4px 12px;
-	transform: skew(-20deg);
-	font-style: normal;
-}*/
 
 
 /* MAIN */
@@ -101,11 +80,19 @@ main {
 	margin: 80px 0;
 }
 
+main .content {
+	background-color: var(--site-main-background-color);
+}
+
 main p,
 main li {
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.5;
+}
+
+main img {
+	border-radius: 2px;
 }
 
 main .headshot {
@@ -132,8 +119,29 @@ footer p {
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 1.5;
+	margin: 0;
 }
 
 footer p:nth-child(1) {
 	flex: 1;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	footer .content {
+		flex-direction: column;
+	}
+}
+
+
+/* PHONES */
+@media only screen and (max-width: 750px) {
+	.content {
+		margin: 0 auto;
+		max-width: 85%;
+	}
+	
+	footer .content {
+		flex-direction: column;
+	}
 }
