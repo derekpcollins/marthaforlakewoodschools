@@ -154,7 +154,12 @@ footer p:nth-child(1) {
 		font-size: 64px;
 	}
 	
-	header .flag,
+	header .flag {
+		font-size: 16px;
+		padding-right: 8px;
+		padding-left: 8px;
+	}
+	
 	header h2 {
 		font-size: 16px;
 	}
