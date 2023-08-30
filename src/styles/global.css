@@ -96,55 +96,39 @@ main {
 		position: relative;
 		
 		&::after {
-			background: linear-gradient(rgba(101,78,163, 0), rgba(101, 78, 163, 1), rgba(101, 78, 163, 0));
+			background: linear-gradient(rgba(101,78,163, 0), rgba(255, 255, 255, .3), rgba(101, 78, 163, 0));
 			content: '';
 			display: block;
 			height: 100%;
 			position: absolute;
 			right: 0;
 			top: 0;
-			width: 2px;
+			width: 1px;
 		}
 		
 		& li {
-			margin: 0 2px;
+			margin: 0 4px;
 			display: inline-block;
 			
 			& a {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			
-			& svg {
-				fill: var(--site-highlight-color);
-				height: 48px;
-				width: 48px;
-			}
-			
-			&:hover svg {
-				fill: white;
-			}
-			
-			& .email {
 				background-color: var(--site-highlight-color);
+				border-radius: 4px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				margin: 3px;
-				border-radius: 4px;
+				transition: background-color .2s linear;
 				height: 42px;
 				width: 42px;
-				
-				& svg {
-					fill: #4B397C;
-					height: 24px;
-					width: 24px;
-				}
 				
 				&:hover {
 					background-color: white;
 				}
+			}
+			
+			& svg {
+				fill: #4B397C;
+				height: 24px;
+				width: 24px;
 			}
 		}
 	}
@@ -152,12 +136,14 @@ main {
 	/* BUTTON */
 	& .button {
 		background-color: var(--site-highlight-color);
+		color: #4B397C;
 		padding: 12px 16px;
-		border-radius: 3px;
+		border-radius: 4px;
 		text-decoration: none;
 		font-weight: 600;
 		display: inline-block;
 		margin-left: 24px;
+		transition: background-color .2s linear;
 		
 		&:hover {
 			background-color: white;
@@ -165,42 +151,24 @@ main {
 	}
 }
 
-main .social li a img {
-	
-	display: inline-block;
-}
-
-main .social .email a {
-	background-color: var(--site-highlight-color);
-	border-radius: 3px;
-	display: flex;
-	margin: 3px 4px;
-	height: 42px;
-	width: 42px;
-}
-
-main .social .email a img {
-	height: 24px;
-	display: inline-block;
-}
-
 
 
 /* FOOTER */
 footer {
 	margin-top: 16px;
+	
+	& p {
+		color: #fff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 0;
+		border: 1px solid #fff;
+		padding: 4px 8px;
+		opacity: .5;
+	}
 }
 
-footer p {
-	color: #fff;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 1.5;
-	margin: 0;
-	border: 1px solid #fff;
-	padding: 4px 8px;
-	opacity: .5;
-}
 
 
 @media only screen and (max-width: 1024px) {
