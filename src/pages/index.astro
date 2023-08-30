@@ -1,22 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 ---
 
 <Layout title="Martha Woerner for Lakewood School Board">
-	<Header />
+	<header>
+		<h1>Martha Woerner</h1>
+		<h2>for Lakewood School Board</h2>
+	</header>
 	<main>
-		<div class="content">
-			<p><img src="/assets/images/martha-woerner-headshot.jpg" alt="Photograph of Martha Woerner" class="headshot" height="300"><strong>Martha Woerner</strong> is a passionate believer in public education's power to transform lives. With nearly 15 years of working for and with school systems, she knows the critical role that boards play in partnership with educators and district leadership in ensuring all students achieve their greatest potential.</p>
-			<p>Why should you vote for Martha Woerner on November 7th?</p>
-			<ul>
-				<li><strong>Parent of young kids</strong> - future members of the Lakewood classes of 2039 & 2041</li>
-				<li>Experience in <strong>policy, strategic planning, progress monitoring, and talent (HR) in K-12 education</strong></li>
-				<li>Will <strong>protect the strength</strong> of a Lakewood education and <strong>ensure <em>ALL</em> have equitable access</strong></li>
-				<li>Will <strong>serve as a parent ambassador</strong>, leveraging relationships formed through the Family Room and PTAs</li>
-			</ul>
-		</div>
+		<ul class="social">
+			<li><a href="https://www.facebook.com/people/Martha-Woerner-for-Lakewood-School-Board/100093839217112/"><img src="/assets/images/square-facebook.svg" alt="Facebook icon" title="Follow me on Facebook" /></a></li>
+			<li><a href="https://www.linkedin.com/in/martha-woerner"><img src="/assets/images/linkedin.svg" alt="LinkedIn icon" title="Follow me on LinkedIn" /></a></li>
+			<li class="email"><a href="mailto:martha4lakewoodschools@gmail.com"><img src="/assets/images/envelope-solid.svg" alt="Envelope icon" title="Email me" /></a></li>
+		</ul>
+		<a href="https://givebutter.com/martha4lkwdschools" class="button">Donate</a>
 	</main>
-	<Footer />
+	<footer>
+		<p>Paid for by Woerner for Lakewood Schools.</p>	
+	</footer>
 </Layout>
