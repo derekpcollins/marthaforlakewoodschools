@@ -36,7 +36,7 @@ body {
 /* HEADER */
 header {
 	background-color: var(--site-primary-color);
-	padding: 40px 0;
+	padding: 40px 0 0;
 }
 
 header .flag {
@@ -67,11 +67,37 @@ header h2 {
 	font-size: 24px;
 	font-weight: 200;
 	color: #fff;
-	margin: -4px 0 0;
+	margin: -2px 0 40px;
 }
 
 header h2 .flag {
 	font-weight: 200;
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+header nav a {
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0 32px 16px 0;
+}
+
+header nav .active a,
+header nav a:hover {
+	color: var(--site-highlight-color);
 }
 
 
