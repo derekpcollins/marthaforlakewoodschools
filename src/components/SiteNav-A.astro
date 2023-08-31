@@ -1,0 +1,11 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<ul>
+	<li class={currentPath === "a" ? "active" : ""}><a href="/a">Home</a></li>
+	<li class={currentPath === "a/about" ? "active" : ""}><a href="/a/about">About</a></li>
+	<li class={currentPath === "a/priorities" ? "active" : ""}><a href="/a/priorities">Priorities</a></li>
+	<li class={currentPath === "a/events" ? "active" : ""}><a href="/a/events">Events</a></li>
+</ul>	

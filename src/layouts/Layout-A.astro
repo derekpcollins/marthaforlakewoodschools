@@ -1,0 +1,50 @@
+--- 
+import '../styles/a.css';
+
+import SiteNav from '../components/SiteNav-A.astro';
+import Footer from '../components/Footer-A.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Elect Martha Woerner for Lakewood School Board.">
+		<meta name="generator" content={Astro.generator} />
+		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
+		<title>{title}</title>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="iJUhDl4r"></script>
+		
+		<div class="container">
+			<!-- HERO -->
+			<div class="hero">
+				<header>
+					<p class="flag">Elect</p>
+					<h1>Martha Woerner</h1>
+					<h2>for Lakewood School Board <span class="flag">November 7</span></h2>
+				</header>
+			</div>
+			
+			<!-- CONTENT -->
+			<div class="content">
+				<nav>
+					<SiteNav />
+				</nav>
+				
+				<slot />
+					
+				<Footer />
+			</div>
+		</div>
+	</body>
+</html>
