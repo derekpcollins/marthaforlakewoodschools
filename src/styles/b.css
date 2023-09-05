@@ -55,7 +55,7 @@ header {
 	
 	& .flag {
 		background-color: var(--site-highlight-color);
-		color: var(--site-primary-color);
+		color: var(--site-lowlight-color);
 		display: inline-block;
 		font-family: var(--site-primary-font);
 		font-size: 24px;
