@@ -1,15 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Actions from '../components/Actions.astro';
 ---
 
 <Layout title="Martha Woerner for Lakewood School Board">
-	<Header />
-	<main>
-		<div class="content">
-			<h2>My Priorities</h2>
-		</div>
-	</main>
-	<Footer />
+	<article>
+		<!--<h2>Priorities</h2>-->
+		
+		<p>As a prospective board member, I have three priorities:</p>
+			
+		<ol>
+			<li><p>First, we must protect what’s great about Lakewood’s public schools. I hear from so many parents, students, and graduates how amazing their education here has been. They’ve been challenged in their pursuits, felt supported and welcomed as people and as learners, and been able to explore multiple pathways and interests &mdash; these are the things that I want for my kids and for all kids. This doesn’t happen without the tireless work of so many educators, leaders, parents, students, and community members, and I’m committed to continuing that legacy.</p></li>
+			
+			<li><p>We must continue to expand that experience to all students because it’s not yet universal. I hear another set of stories about struggling to navigate our schools and their students’ needs. I see it in our data as well. For example, the difference in reading proficiency at the end of third grade between our Black and white students is nearly 30 percentage points. We need to continue to work to make sure every student is set up to reach their greatest potential.</p></li>
+			
+			<li><p>Finally, I’d like to focus on community-wide collaboration &mdash; how our district, schools, and board partner with students, families, our city government, and the broader community. Together, let’s strengthen two-way dialogue, authentic engagement, and deep collaboration in service of our students’ education and the strength of our community.</p></li>
+		</ol>
+		
+		<Actions />
+	</article>
 </Layout>
