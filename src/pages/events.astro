@@ -1,9 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+import events from '../data/events.json';
+
+let eventsByDate = events.sort((a,b) => {
+	let dateA = Date.parse(a.date);
+	let dateB = Date.parse(b.date);
+	return  dateA - dateB;
+});
+
+let today = new Date().toJSON().split("T")[0];
+
+let convertDate = (date, time) => {
+	let eventDate = new Date(date + ' ' + time + 'Z');
+	let options = { weekday: 'long', month: 'long', day: 'numeric' };
+	return eventDate.toLocaleDateString('en-US', options);
+}
+
+let convertTime = (date, time) => {
+	let eventDate = new Date(date + ' ' + time + 'Z');
+	let options = { timeZone: 'UTC', hour12: true, hour: 'numeric', minute: 'numeric' }
+	return eventDate.toLocaleTimeString('en-US', options);
+}
 ---
 
 <Layout title="Martha Woerner for Lakewood School Board">
 	<article>
-		<h2>Events</h2>
+		<h2>Upcoming Events</h2>
+		<ul class="events-list">
+			{
+				eventsByDate.map(data => (
+					Date.parse(data.date) >= Date.parse(today) &&
+					<li>
+						<h3 class="title">{data.title}</h3>
+						<p class="location">{convertDate(data.date, data.startTime)} {data.endTime ? ' from ' + convertTime(data.date, data.startTime) + ' to ' + convertTime(data.date, data.endTime) : ' at ' + convertTime(data.date, data.startTime) }{data.location ? ' at ' + data.location : ''}</p>
+						<p class="description">{data.description}</p>
+						{data.url && 
+							<p class="more-info"><a href="{data.url}" class="button">More information</a></p>
+						}
+					</li>
+				))
+			}
+		</ul>
 	</article>
 </Layout>
