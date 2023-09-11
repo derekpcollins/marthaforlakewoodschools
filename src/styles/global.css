@@ -24,6 +24,7 @@
 
 /* GENERAL */
 body {
+	background-color: var(--site-primary-color);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	margin: 0;
 	height: 100vh;
@@ -34,6 +35,7 @@ body {
 	flex-direction: row;
 	height: 100%;
 	width: 100%;
+	box-sizing: boder-box;
 }
 
 .hero {
@@ -91,13 +93,6 @@ header {
 	}
 }
 
-.headshot {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 400px;
-}
-
 
 /* SITE NAV */
 nav {
@@ -108,11 +103,13 @@ nav {
 	position: fixed;
 	z-index: 100;
 	width: 100%;
+	box-sizing: border-box;
 	
 	& ul {
 		display: flex;
 		flex-direction: row;
 		list-style: none;
+		margin: 0;
 		padding: 0;
 		
 		& li {
@@ -200,6 +197,44 @@ article {
 }
 
 
+/* BUTTON */
+.button {
+	background-color: white;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	border: 2px solid var(--site-lowlight-color);
+	border-radius: 4px;
+	color: var(--site-lowlight-color);
+	font-size: 20px;
+	font-weight: 500;
+	padding: 16px 24px;
+	text-decoration: none;
+	transition: background-color .2s linear;
+	white-space: nowrap;
+	
+	& svg {
+		fill: var(--site-lowlight-color);
+		margin-left: 16px;
+	}
+	
+	&:hover {
+		background-color: var(--site-lowlight-color);
+		color: white;
+		
+		& svg {
+			fill: white;
+		}
+	}
+	
+	&.small {
+		font-size: 16px;
+		font-weight: 500;
+		padding: 8px 16px;
+	}
+}
+
+
 /* ACTIONS */
 .actions-list {
 	margin-top: 56px;
@@ -273,7 +308,32 @@ article {
 
 
 /* EVENTS */
-
+.events-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	> li {
+		padding: 24px 0;
+		
+		> .title {
+			font-family: 'D Diam';
+			font-size: 32px;
+			margin-bottom: 8px;
+		}
+		
+		> .location {
+			margin: 0 0 16px;
+			font-size: 24px;
+			font-weight: 500;
+		}
+		
+		> .description {
+			font-size: 18px;
+			margin: 0;
+		}
+	}
+}
 
 
 /* FOOTER */
@@ -346,6 +406,53 @@ footer {
 	}
 }
 
+/* TABLETS: PORTRAIT */
+@media only screen and (max-width: 820px) {
+	body {
+		height: auto;
+	}
+	
+	.container {
+		flex-direction: column;
+		height: auto;
+	}
+	
+	header {
+		padding: 40px 24px 680px;
+	}
+	
+	nav {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		padding: 24px 16px;
+		position: static;
+		border-bottom: 1px solid rgba(48,23,116,.2);
+		
+		& ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			
+			& li {
+				margin-right: 0;
+				
+				& a {
+					font-size: 32px;
+					
+					&::after {
+						height: 3px;
+						bottom: -4px;
+					}
+				}
+			}
+		}
+	}
+	
+	article {
+		padding-top: 48px;
+	}
+}
+
 
 /* PHONES */
 @media only screen and (max-width: 750px) {
@@ -356,5 +463,158 @@ footer {
 	.container {
 		flex-direction: column;
 		height: auto;
+	}
+	
+	header {
+		padding: 40px 24px 380px;
+		
+		& .flag {
+			font-size: 16px;
+			padding: 6px 8px 2px;
+		}
+		
+		& h1 {
+			font-size: 38px;
+			line-height: 1;
+			text-shadow: -2px 2px 0 var(--site-tertiary-color);
+		}
+		
+		& h2 {
+			font-size: 16px;
+			margin: 2px 0 0;
+		}
+	}
+	
+	nav {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		padding: 24px 16px;
+		position: static;
+		border-bottom: 1px solid rgba(48,23,116,.2);
+		
+		& ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			
+			& li {
+				margin-right: 0;
+				
+				& a {
+					font-size: 18px;
+					
+					&::after {
+						height: 3px;
+						bottom: -4px;
+					}
+				}
+			}
+		}
+	}
+	
+	article {
+		padding: 24px;
+		width: 100%;
+		box-sizing: border-box;
+		
+		& h2 {
+			font-size: 32px;
+			margin-bottom: 24px;
+		}
+		
+		& p {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		
+		& li {
+			font-size: 18px;
+		}
+		
+		& figure {
+			margin: 0 0 24px 0;
+			
+			& figcaption {
+				font-size: 14px;
+				margin: 1px 0 0 0;
+			}
+		}
+	}
+	
+	.actions-list {
+		margin-top: 56px;
+		flex-direction: column;
+		
+		& li {
+			margin-bottom: 16px;
+			
+			&:nth-child(1) {
+				margin-right: 0;
+			}
+			
+			& a {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				font-size: 20px;
+				font-weight: 500;
+				padding: 16px 24px;
+				
+				& svg {
+					margin-right: 16px;
+				}
+			}
+		}
+	}
+	
+	.events-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		> li {
+			padding: 24px 0;
+			
+			> .title {
+				font-family: 'D Diam';
+				font-size: 24px;
+				margin-bottom: 8px;
+			}
+			
+			> .location {
+				margin: 0 0 16px;
+				font-size: 20px;
+				font-weight: 500;
+			}
+			
+			> .description {
+				font-size: 18px;
+				margin: 0;
+			}
+		}
+	}
+	
+	footer {
+		padding: 40px 24px;
+		
+		& .footer-nav {
+			flex-direction: column;
+			justify-content: center;
+			
+			& .social-list {
+				margin-top: 24px;
+				flex: 0;
+				
+				& li {
+					margin: 0 8px;
+				}
+			}
+		}
+		
+		& p {
+			margin-top: 24px;
+			display: block;
+			text-align: center;
+		}
 	}
 }
