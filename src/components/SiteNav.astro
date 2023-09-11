@@ -5,7 +5,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
 <ul>
 	<li class={currentPath === "" ? "active" : ""}><a href="/">Home</a></li>
-	<li class={currentPath === "about" ? "active" : ""}><a href="/about">About</a></li>
-	<li class={currentPath === "priorities" ? "active" : ""}><a href="/priorities">Priorities</a></li>
-	<li class={currentPath === "events" ? "active" : ""}><a href="/events">Events</a></li>
+	<li class:list={{active: Astro.url.pathname.startsWith('/about') }}><a href="/about">About</a></li>
+	<li class:list={{active: Astro.url.pathname.startsWith('/priorities') }}><a href="/priorities">Priorities</a></li>
+	<li class:list={{active: Astro.url.pathname.startsWith('/events') }}><a href="/events">Events</a></li>
 </ul>	
