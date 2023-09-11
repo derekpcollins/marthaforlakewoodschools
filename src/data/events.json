@@ -6,8 +6,7 @@
 		"endTime": "",
 		"description": "Hear from candidates on the November ballot at the League of Women Voters and the Lakewood Chamber of Commerce’s candidates forum.",
 		"location": "Lakewood City Hall Auditorium",
-		"url": "https://www.lwvgreatercleveland.org/content.aspx?page_id=4002&club_id=527296&item_id=2068931",
-		"image": ""
+		"url": "https://www.lwvgreatercleveland.org/content.aspx?page_id=4002&club_id=527296&item_id=2068931"
 	},
 	{
 		"title": "Lakewood Community Festival",
@@ -16,8 +15,7 @@
 		"endTime": "17:00:00",
 		"description": "Stop by to say hello and enjoy some kid-friendly activities at the Lakewood Community Festival.",
 		"location": "Madison Park",
-		"url": "https://www.facebook.com/LkwdCommunityFestival",
-		"image": ""
+		"url": "https://www.facebook.com/LkwdCommunityFestival"
 	},
 	{
 		"title": "Popsicles in the Park",
@@ -26,11 +24,16 @@
 		"endTime": "16:00:00",
 		"description": "School has started, but we can still hold onto the last remnants of summer weather! Bring the family for popsicles, play, and to meet school board candidate Martha Woerner.",
 		"location": "Kaufmann Park",
-		"url": "https://www.facebook.com/events/3451727221709742/?acontext=%7B%22event_action_history%22%3A[]%7D",
-		"image": ""
+		"url": "https://www.facebook.com/events/3451727221709742/?acontext=%7B%22event_action_history%22%3A[]%7D"
 	},
 	{
-		"title": "Made up event",
-		"date": "2022-7-14"
+		"title": "Friend- and Fundraiser",
+		"description": "Come meet Martha and get involved with the campaign at this friend- and fundraiser.",
+		"date": "2023-09-27",
+		"startTime": "17:30",
+		"endTime": "19:30",
+		"location": "The Root Cafe",
+		"url": "https://bit.ly/martha_rsvp",
+		"label": "RSVP"
 	}
 ]
