@@ -297,14 +297,6 @@ article {
 	border-radius: 4px;
 }
 
-.facebook-container {
-	margin: 64px 0 0;
-	
-	& h3 {
-		color: var(--site-lowlight-color);
-		font-size: 24px;
-	}
-}
 
 
 /* EVENTS */
@@ -313,25 +305,41 @@ article {
 	margin: 0 0 32px;
 	padding: 0;
 	
-	> li {
+	& > li {
+		margin: 0;
 		padding: 0 0 16px;
 		
-		> .title {
+		& > .title {
 			font-family: 'D Diam';
 			font-size: 32px;
 			margin-bottom: 4px;
 		}
 		
-		> .location {
+		& > .location {
 			margin: 0 0 10px;
 			font-size: 24px;
 			font-weight: 500;
 		}
 		
-		> .description {
+		& > .description {
 			font-size: 18px;
 			margin: 0 0 24px;
 		}
+	}
+}
+
+
+/* FACEBOOK CONTAINER */
+/* EVENTS CONTAINER */
+.facebook-container,
+.events-container {
+	margin: 64px 0 0;
+	
+	& h4 {
+		border-bottom: 1px solid rgba(48,23,116,.2);
+		color: var(--site-lowlight-color);
+		font-size: 24px;
+		padding-bottom: 6px;
 	}
 }
 
@@ -576,22 +584,21 @@ footer {
 		margin: 0;
 		padding: 0;
 		
-		> li {
-			padding: 24px 0;
+		& > li {
 			
-			> .title {
+			& > .title {
 				font-family: 'D Diam';
 				font-size: 24px;
 				margin-bottom: 8px;
 			}
 			
-			> .location {
+			& > .location {
 				margin: 0 0 16px;
 				font-size: 20px;
 				font-weight: 500;
 			}
 			
-			> .description {
+			& > .description {
 				font-size: 18px;
 				margin: 0;
 			}
