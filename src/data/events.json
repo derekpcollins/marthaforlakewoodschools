@@ -35,5 +35,15 @@
 		"location": "The Root Cafe",
 		"url": "https://bit.ly/martha_rsvp",
 		"label": "RSVP"
+	},
+	{
+		"title": "Lit Drop",
+		"description": "Help spread the word about Martha to our Lakewood neighbors the afternoon of Sunday, October 15. Pick up materials at 1222 Chase from 2-4 PM and go for a stroll in Lakewood.",
+		"date": "2023-10-15",
+		"startTime": "14:00:00",
+		"endTime": "16:00:00",
+		"location": "1222 Chase",
+		"url": "mailto:martha4lakewoodschools@gmail.com",
+		"label": "RSVP"
 	}
 ]
