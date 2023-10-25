@@ -45,5 +45,25 @@
 		"location": "1222 Chase",
 		"url": "mailto:martha4lakewoodschools@gmail.com",
 		"label": "RSVP"
+	},
+	{
+		"title": "Postcard Party",
+		"description": "Join us on Thursday, 10/26 from 3-5 PM at 1222 Chase to help send postcards to voters.",
+		"date": "2023-10-26",
+		"startTime": "15:00:00",
+		"endTime": "17:00:00",
+		"location": "1222 Chase",
+		"url": "mailto:martha4lakewoodschools@gmail.com",
+		"label": "RSVP"
+	},
+	{
+		"title": "Lit Drop",
+		"description": "Take a stroll through a Lakewood neighborhood and drop off literature at voters houses on the afternoon of Saturday, November 4th. Pickup materials at 1222 Chase between 1 and 4.",
+		"date": "2023-11-4",
+		"startTime": "13:00:00",
+		"endTime": "16:00:00",
+		"location": "1222 Chase",
+		"url": "mailto:martha4lakewoodschools@gmail.com",
+		"label": "RSVP"
 	}
 ]
