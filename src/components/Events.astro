@@ -20,8 +20,8 @@ let convertTime = (date, time) => {
 	let options = { timeZone: 'UTC', hour12: true, hour: 'numeric', minute: 'numeric' }
 	return eventDate.toLocaleTimeString('en-US', options);
 }
----
 
+/*
 <ul class="events-list">
 	{
 		eventsByDate.map(data => (
@@ -37,3 +37,9 @@ let convertTime = (date, time) => {
 		))
 	}
 </ul>
+*/
+---
+
+
+
+<p><em>There are currently no upcoming events. Please check back later.</em></p>
